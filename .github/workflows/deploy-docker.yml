@@ -1,4 +1,4 @@
-name: Docker Build & Push to Docker Hub
+name: Build & Push users-service to Docker Hub
 
 on:
   push:
@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Log in to Docker Hub
+      - name: Login to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      - name: Build and push users-service image
+      - name:  Build and push Docker image
         run: |
-          docker build -t harithasridhar/users-service:latest /.microservices/services
+          docker build -t harithasridhar/users-service:latest ./.microservices/services
           docker push harithasridhar/users-service:latest
