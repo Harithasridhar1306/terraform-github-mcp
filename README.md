@@ -37,7 +37,8 @@ testing done locally:
 
 docker build -t <your-docker-name>/users-service ./services/users
 docker tag users-service <your-docker-name>/users-service:latest
-docker push <your-docker-name>/users-service
+docker push <your-docker-name>/users-service 
+Later this docker image needs to be pushed to GCR.
 
 ### 5. Deploy to GKE with kubectl
 gcloud container clusters get-credentials devops-cluster --region us-central1
