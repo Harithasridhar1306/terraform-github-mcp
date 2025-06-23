@@ -39,3 +39,15 @@ resource "google_container_node_pool" "primary_nodes" {
     machine_type = "e2-medium"
   }
 }
+
+resource "google_compute_network" "custom_vpc" {
+  name                    = "devops-vpc"
+  auto_create_subnetworks = false
+}
+
+resource "google_compute_subnetwork" "custom_subnet" {
+  name          = "my-subnet"
+  ip_cidr_range = "10.10.0.0/16"
+  region        = var.region
+  network       = google_compute_network.custom_vpc.id
+}
