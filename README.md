@@ -35,6 +35,15 @@ testing done locally:
 
 ### 4.Build and Push Docker Images
 
+You can do it via gha workflow given -
+![image](https://github.com/user-attachments/assets/b6ad5bb3-9e20-40a2-abd7-45d4f63c1fd4)
+
+![image](https://github.com/user-attachments/assets/6522dab6-50d0-4fc6-983c-3146dc465e94) --https://github.com/Harithasridhar1306/terraform-github-mcp/actions/runs/15823257306/job/44597154118
+
+Inoder to run this workflow you need to give you Docker username and DOcker Password(not recommended) please use PAT instead --under variables & Secrets
+![image](https://github.com/user-attachments/assets/ae8d38f7-2bde-41bd-a9ab-cfed8d773a03)
+
+
 docker build -t <your-docker-name>/users-service ./services/users
 docker tag users-service <your-docker-name>/users-service:latest
 docker push <your-docker-name>/users-service 
