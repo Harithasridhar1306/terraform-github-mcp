@@ -18,5 +18,5 @@ jobs:
 
       - name: Build and push users-service image
         run: |
-          docker build -t harithasridhar/users-service:latest ./.microservices/services/users
+          docker build -t harithasridhar/users-service:latest ./.microservices/services/
           docker push harithasridhar/users-service:latest
