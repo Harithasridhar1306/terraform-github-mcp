@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and push image
         run: |
-          docker build -t harithasridhar/users-service:latest ./services/users
+          docker build -t harithasridhar/users-service:latest .microservices/services/users
           docker push harithasridhar/users-service:latest
 
      
